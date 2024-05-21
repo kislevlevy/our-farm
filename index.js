@@ -1,8 +1,16 @@
 // Global imports:
-const fs = require("fs");
-const http = require("http");
-const url = require("url");
-const templateRender = require("./js-modules/templateRender");
+import fs from "fs";
+import http from "http";
+import path from "path";
+import url from "url";
+
+// Global veriables:
+const __filename = url.fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+// Modules imports:
+import templateRender from "./js-modules/templateRender.js";
+///////////////////////////////////////////////////////////////////
 
 // File imports:
 const data = fs.readFileSync(`${__dirname}/api-data/data.json`, "utf-8");

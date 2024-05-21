@@ -1,5 +1,5 @@
 // Helper functions:
-module.exports = function (template, product) {
+export default function (template, product) {
   return template
     .replace(/{%PRODUCT_NAME%}/g, product.productName)
     .replace(/{%PRODUCT_IMAGE%}/g, product.image)
@@ -10,4 +10,4 @@ module.exports = function (template, product) {
     .replace(/{%PRODUCT_DESCRIPTION%}/g, product.description)
     .replace(/{%PRODUCT_ID%}/g, product.id)
     .replace(/{%IS_ORGANIC%}/g, product.organic ? "" : "not-organic");
-};
+}

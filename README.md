@@ -20,3 +20,33 @@ Our Farm API is a robust and efficient Node.js-based API designed to power the "
 - **API Development:** Expertise in designing and implementing RESTful APIs.
 - **GET Request Handling:** Proficiency in managing and optimizing "get" requests to ensure efficient data retrieval.
 - **Server-side Programming:** Strong skills in developing backend solutions using Node.js.
+
+## Running the Server
+
+To open the "Our Farm" website on your local machine, follow these steps:
+
+1. Clone the repository to your local machine using Git:
+
+   ```bash
+   git clone https://github.com/kiso1/our-farm
+   ```
+
+2. Navigate to the project directory:
+
+   ```bash
+   cd our-farm
+   ```
+
+3. Install dependencies using npm:
+
+   ```bash
+   npm install
+   ```
+
+4. Start the server by running the following command:
+
+   ```bash
+   npm start
+   ```
+
+5. Once the server is running, open your web browser and navigate to the provided URL. You can typically do this by pressing `ctrl` (or `cmd` on macOS) and clicking the link displayed in the console.

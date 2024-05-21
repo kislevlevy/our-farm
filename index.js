@@ -72,8 +72,10 @@ const server = http.createServer((req, res) => {
 
 // Server start:
 const PORT = process.env.PORT || 3000;
-server.listen(PORT, "127.0.0.1", () => {
-  console.log(`Listning on port ${PORT}`);
+server.listen(PORT, "localhost", () => {
+  console.log(
+    `Server is live\nctrl + click to open => http://localhost:${PORT}\nctrl + c to terminate program`
+  );
 });
 
 ///////////////////////////////////////////////////////////////////

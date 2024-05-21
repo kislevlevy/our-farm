@@ -9,5 +9,5 @@ export default function (template, product) {
     .replace(/{%PRODUCT_QUANTITY%}/g, product.quantity)
     .replace(/{%PRODUCT_DESCRIPTION%}/g, product.description)
     .replace(/{%PRODUCT_ID%}/g, product.id)
-    .replace(/{%IS_ORGANIC%}/g, product.organic ? "" : "not-organic");
+    .replace(/{%IS_ORGANIC%}/g, product.organic ? '' : 'not-organic');
 }

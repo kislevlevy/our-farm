@@ -51,4 +51,4 @@ To open the "Our Farm" website on your local machine, follow these steps:
    npm run start:dev
    ```
 
-5. Once the server is running, open your web browser and navigate to the provided URL. You can typically do this by pressing `ctrl` (or `cmd` on macOS) and clicking the link displayed in the console.
+5. Once the server is running, open your web browser and navigate to the provided URL.

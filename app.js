@@ -9,25 +9,45 @@ const __filename = url.fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 // Modules imports:
-import templateRender from './js-modules/templateRender.js';
+import templateRender from './src/modules/templateRender.js';
+
 ///////////////////////////////////////////////////////////////////
 
+// Public route:
+const publicDir = path.join(__dirname, 'public');
+
+const servePublicFile = (filePath, res) => {
+  fs.readFile(filePath, (err, data) => {
+    if (err) {
+      res.writeHead(404, { 'Content-type': 'text/html' });
+      res.end('<h1>File not found</h1>');
+    } else {
+      const ext = path.extname(filePath).slice(1);
+      const mimeTypes = {
+        css: 'text/css',
+      };
+      res.writeHead(200, { 'Content-type': mimeTypes[ext] || 'text/plain' });
+      res.end(data);
+    }
+  });
+};
+
 // File imports:
-const data = fs.readFileSync(`${__dirname}/api-data/data.json`, 'utf-8');
+const data = fs.readFileSync(`${__dirname}/src/api/data.json`, 'utf-8');
 const dataObj = JSON.parse(data);
 const productTemplate = fs.readFileSync(
-  `${__dirname}/html-templates/product-template.html`,
+  `${__dirname}/src/templates/product-template.html`,
   'utf-8'
 );
 const overviewTemplate = fs.readFileSync(
-  `${__dirname}/html-templates/overview-template.html`,
+  `${__dirname}/src/templates/overview-template.html`,
   'utf-8'
 );
 const cardTemplate = fs.readFileSync(
-  `${__dirname}/html-templates/card-template.html`,
+  `${__dirname}/src/templates/card-template.html`,
   'utf-8'
 );
-const icon = fs.readFileSync(`${__dirname}/images/icon.png`);
+const icon = fs.readFileSync(`${__dirname}/src/img/icon.png`);
 ///////////////////////////////////////////////////////////////////
 
 // Create server:
@@ -79,5 +99,3 @@ server.listen(PORT, HOST, () => {
     `Server is live\nctrl + click to open => http://localhost:${PORT}\nctrl + c to terminate program`
   );
 });
-
-///////////////////////////////////////////////////////////////////

@@ -1,14 +1,13 @@
 {
   "name": "our-farm",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "app.js",
   "type": "module",
   "scripts": {
-    "start": "nodemon index.js"
+    "start:dev": "nodemon app.js",
+    "start:prod": "node app.js"
   },
   "author": "Kislev Levy",
-  "license": "ISC",
-  "description": "",
   "devDependencies": {
     "nodemon": "^3.1.0"
   }

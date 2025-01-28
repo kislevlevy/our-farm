@@ -1,8 +1,8 @@
-# Our Farm API
+# Our Farm
 
 ## Project Overview
 
-Our Farm API is a robust and efficient Node.js-based API designed to power the "Our Farm" shopping site, enabling users to purchase fresh goods such as vegetables and cheese. The core functionality of this project revolves around developing a reliable server-side solution that efficiently handles "get" requests to retrieve product data.
+Our Farm is a robust and efficient Node.js-based API designed to power the "Our Farm" shopping site, enabling users to purchase fresh goods such as vegetables and cheese. The core functionality of this project revolves around developing a reliable server-side solution that efficiently handles "get" requests to retrieve product data.
 
 ## Features
 
